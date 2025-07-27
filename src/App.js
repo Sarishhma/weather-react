@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import Todo from "./MyComponent/Todo";
 import './App.css';
+import Add from "./MyComponent/Add";
 
 function App() {
+  let todo = [
+    {
+      sno:1,
+      Title:"bath",
+      desc:"have to go take a bath",
+    },
+   {
+      sno:2,
+      Title:"eat",
+      desc:"have to go eat",
+   },
+   {
+      sno:3,
+      Title:"sleep",
+      desc:"have to go sleep",
+   }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Todo todo={todo}/>
+   <Add add={add}/>
+   </>
   );
 }
 
